@@ -1,0 +1,46 @@
+import math
+#                           Problema 1 
+# Solicitar al usuario la temperatura en grados Celsius
+temperatura_celsius = float(input("Ingrese la temperatura en grados Celsius: "))
+
+# Convertir la temperatura de Celsius a Kelvin
+temperatura_kelvin = temperatura_celsius + 273.15
+
+# Mostrar el resultado de la conversión
+print("La temperatura en grados Kelvin es:", temperatura_kelvin, "K")
+
+################################################################
+#                           problema 2 
+
+
+# Definir las estaturas en metros
+estaturas = [1.5, 2.2, 1.56, 1.78, 1.82, 1.90, 1.66, 1.91, 1.76, 1.88]
+
+# Calcular la suma de las estaturas
+suma_estaturas = sum(estaturas)
+
+# Calcular la cantidad total de muestras (número de estaturas)
+cantidad_muestras = len(estaturas)
+
+# Calcular la media
+media = suma_estaturas / cantidad_muestras
+
+# Mostrar el resultado
+print("La media de las estaturas es:", media, "metros")
+
+################################################################
+#                           Problema 3
+# Calcular la media
+media = sum(estaturas) / len(estaturas)
+
+# Calcular la suma de las diferencias al cuadrado
+suma_diferencias_cuadrado = sum((x - media) ** 2 for x in estaturas)
+
+# Calcular la varianza dividiendo la suma de las diferencias al cuadrado entre el total de valores
+varianza = suma_diferencias_cuadrado / len(estaturas)
+
+# Calcular la desviación estándar como la raíz cuadrada de la varianza
+desviacion_estandar = math.sqrt(varianza)
+
+# Mostrar el resultado
+print("La desviación estándar de las estaturas es:", desviacion_estandar, "metros")
